@@ -1,0 +1,50 @@
+*{
+  font-family: monospace;
+  box-sizing: border-box;
+}
+#container {
+  padding: 10px;
+}
+.title{
+  margin: 8px 0 8px 0; /*modificamos el margin por defecto del h3*/
+}
+hr{
+  width:75px;
+  border: 2px solid black;
+  border-radius: 300px; /*bordes redondeados*/
+  margin-left: 0;
+  margin-bottom: 20px;
+
+}
+#images{
+  overflow: auto; /*para que lo elementos con float vuelvan a pertenecer al contenedor padre*/
+  display: inline-block;/*al no tener widt ni heigth definido, volvemos el contenedor padre inline para que solo ocupe el espacio que neceista*/
+
+}
+.box{
+  width: 200px;
+  height: 200px;
+  float: left; /*los elementos flotaran a la izquierda*/
+  margin-right: 25px;
+  margin-bottom: 25px;
+  position: relative; /*aplicamos positon relative no para generar cambios sino para que los h4 de los elementos con clase .box que poseen posicionamiento absoluto lo tomen como eje de su posicion*/
+}
+.cut{
+  clear: left; /*aplicamos clear: left al cuarto elemento para que no hayan elemento flotantes a sus derecha forzando así a que se ubique en la primera poscion de la siguiente fila */
+
+}
+div img {
+  max-width: 100%; /*para que la imagen se ajuste a su contenedor*/
+  /*aplicamos filtro a la imagenes para opacarlas un poco*/
+  -webkit-filter:brightness(60%) blur(5px); /* usamos -webkit-filter para safari*/
+  filter:  brightness(60%) blur(1px); /*brightness modula el brillo y blur el desenfoque*/
+}
+
+.box span {
+  position: absolute;/*aplicamos position absolute para posicionar el texto encima de la imagen*/
+  bottom: 18px;
+  right: 10px;
+  color: white;
+
+
+}
