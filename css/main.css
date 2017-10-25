@@ -1,6 +1,6 @@
 *{
   font-family: monospace;
-  box-sizing: border-box;
+  box-sizing: border-box;/*para que los conenedores mantengan un tamaño definido sin que se vea a fectado por el padding y el border*/
 }
 #container {
   padding: 10px;
@@ -9,6 +9,7 @@
   margin: 8px 0 8px 0; /*modificamos el margin por defecto del h3*/
 }
 hr{
+  /*aplicamos cambios a los estilos que vienen por defecto en el hr*/
   width:75px;
   border: 2px solid black;
   border-radius: 300px; /*bordes redondeados*/
@@ -35,7 +36,7 @@ hr{
 div img {
   max-width: 100%; /*para que la imagen se ajuste a su contenedor*/
   /*aplicamos filtro a la imagenes para opacarlas un poco*/
-  -webkit-filter:brightness(60%); /* usamos -webkit-filter para safari*/
+  -webkit-filter:brightness(60%); /* para que funcione en el navegador safari*/
   filter:  brightness(60%); /*brightness modula el brillo*/
 }
 
@@ -46,6 +47,4 @@ div img {
   color: white;
   font-size: 16px;
   font-weight: 400;
-
-
 }
